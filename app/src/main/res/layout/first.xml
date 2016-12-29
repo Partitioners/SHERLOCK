@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<LinearLayout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dell.sherlock.MainActivity"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/images"
+            android:id="@+id/imageView"
+            android:adjustViewBounds="true"
+
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        android:id="@+id/bar"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/imdb"
+            android:layout_weight="0.43"
+            android:id="@+id/imageView4"
+            android:padding="10sp"
+
+            />
+
+        <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:paddingTop="19sp"
+            android:paddingRight="15sp"
+            android:layout_weight="1.26">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="9.2/"
+            android:textStyle="bold"
+            android:textSize="40sp"
+
+
+
+            android:id="@+id/textView2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:textSize="20sp"
+            android:layout_marginTop="20sp"
+            />
+
+  </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:text="TV-14  |  BBC-ONE  |  TV SERIES(2010-)  |  CRIME , MYSTERY "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bar"
+            android:padding="4dp"
+            android:layout_marginLeft="3dp"
+            android:textSize="20dp"
+            android:id="@+id/textView3"
+            />
+
+
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
+    </ScrollView>
