@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">SHERLOCK</string>
 
+
+    <string name="s1e1">The brilliant opener that took TV by storm, in which veteran military medic
+          Dr John Watson finds his thirst for adventure
+           fulfilled by his new flatmate, the genius consulting detective Sherlock Holmes, on the trail of a pill-popping serial killer taxi driver who works for… Moriarty! Loosely based on A Study in Scarlet.
+
+    </string>
+
+
+    <string name="s1e2">Called in by an old friend to investigate a break in at a city bank, Sherlock stumbles upon murder and heavily encoded mystery as he and Watson pursue a gang of Chinese smugglers desperate to get their hands on a stolen priceless treasure. Once again, the closing moments revealed a mysterious criminal sponsor known only as…M!</string>
+    <string name="s1e3">Commissioned by Mycroft to investigate the death of a government employee Sherlock solves a series of linked mysteries that culminate in his first-face-to-face encounters with his nemesis Moriarty – and a memorably tense bomb-vest Mexican standoff at an atmospheric Victorian swimming baths.</string>
+    <string name="s2e1">The great deducer meets a great seducer as Sherlock falls hard for the charms of dominatrix and ruthless blackmailer Irene Adler (Lara Pulver) in an episode sizzling with unexpected sexual tension. Sherlock scores a victory in their battle of hearts and minds, but only after he mistakenly hands Moriarty one of his greatest coups.</string>
+    <string name="s2e2">In this adaptation of the most famous Holmes tale of them all, Sherlock and Watson help a man whose father was supposedly killed by a monstrous hound on Dartmoor, and uncover an MOD conspiracy to develop a hallucinogenic bio-weapon.</string>
+    <string name="s2e3">Moriarty uses a powerful new weapon to turn Sherlock’s newfound fame against him. In a memorable rooftop finale, Moriarty convinces Sherlock that only his suicide will save the lives of Watson and Mrs Hudson. And while Moriarty appears to blow his own brains out, Sherlock jumps to certain death… Or does he?</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
