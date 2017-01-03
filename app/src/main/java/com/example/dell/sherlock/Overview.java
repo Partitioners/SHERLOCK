@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,11 +52,13 @@ public class Overview extends Fragment {
         words.add(new seasonlist("SEASON","2"));
         words.add(new seasonlist("SEASON","3"));
 
-        customarrayadapter adapter=new customarrayadapter(getActivity(),words);
-        ListView listView=(ListView) rootView.findViewById(R.id.list);
-
+        customarrayadapter adapter=new customarrayadapter(getActivity(),words);             //maybe this needs to change to words only ie getactivity needs to be removed
+        RecyclerView listView=(RecyclerView) rootView.findViewById(R.id.list);              //change listview to recycler in list.xml
+        LinearLayoutManager horizontalLayoutManagaer
+                = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        listView.setLayoutManager(horizontalLayoutManagaer);
         listView.setAdapter(adapter);
-        setListViewHeightBasedOnChildren(listView);
+        //setListViewHeightBasedOnChildren(listView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> l, View v, int position, long id) {
@@ -74,7 +78,7 @@ public class Overview extends Fragment {
 
         return rootView;
     }
-    public static void setListViewHeightBasedOnChildren(ListView listView) {
+    /*public static void setListViewHeightBasedOnChildren(ListView listView) {
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {
             // pre-condition
@@ -92,6 +96,6 @@ public class Overview extends Fragment {
         params.height = totalHeight
                 + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
-    }
+    }*/
 
 }

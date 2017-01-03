@@ -6,6 +6,7 @@ package com.example.dell.sherlock;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by DELL on 28-12-2016.
  */
 
-public class customarrayadapter extends ArrayAdapter<seasonlist>{
+public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.MyViewHolder>{
 
 
     private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
@@ -32,12 +34,22 @@ public class customarrayadapter extends ArrayAdapter<seasonlist>{
      * @param context        The current context. Used to inflate the layout file.
      * @param androidFlavors A List of AndroidFlavor objects to display in a list
      */
-    public customarrayadapter(Activity context, ArrayList<seasonlist> androidFlavors) {
-        // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
-        // the second argument is used when the ArrayAdapter is populating a single TextView.
-        // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
-        // going to use this second argument, so it can be any value. Here, we used 0.
-        super(context, 0, androidFlavors);
+    private List<seasonlist> horList;
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        public MyViewHolder(View view) {
+            super(view);
+            TextView nameTextView = (TextView) view.findViewById(R.id.txt);
+            TextView numberTextView = (TextView) view.findViewById(R.id.txt1);
+
+        }
+    }
+
+
+
+    public customarrayadapter(ArrayList<seasonlist> horlist) {
+        this.horList=horlist;
     }
 
     /**
@@ -62,13 +74,13 @@ public class customarrayadapter extends ArrayAdapter<seasonlist>{
         seasonlist currentAndroidFlavor = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.txt);
+
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
         nameTextView.setText(currentAndroidFlavor.retdefault());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.txt1);
+
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         numberTextView.setText(currentAndroidFlavor.rethindi());

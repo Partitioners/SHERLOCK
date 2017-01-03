@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 db=new MyDBhandler(this);
+
         db.addEpisode(new EpisodesInfo("A Study in Pink","24 OCT 2010","26 users","32 critics",getString(R.string.s1e1),"1 hr 28 min",
                 "9.1",BitmapFactory.decodeResource(this.getResources(),R.drawable.s01e01)));        //s01e01
        db.addEpisode(new EpisodesInfo("The Blind Banker","31 OCT 2010","17 users","29 critics",getString(R.string.s1e2),"1 hr 29 min",

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.dell.sherlock.MainActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     >
@@ -118,11 +117,13 @@
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
+        android:layout_margin="10sp"
         android:layout_height="wrap_content"
-        android:divider="#c0c0c0"
+        android:divider="@color/white"
         android:dividerHeight="4.0sp"
 
         />
+
 </LinearLayout>
 </ScrollView>
 
