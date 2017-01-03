@@ -4,6 +4,7 @@ package com.example.dell.sherlock;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +36,7 @@ public class Overview extends Fragment {
 
 
             View rootView = inflater.inflate(R.layout.first, container, false);
+
         Button button=(Button)rootView.findViewById(R.id.youtube);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class Overview extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> l, View v, int position, long id) {
                 switch (position) {
-                    case 0:       Intent i = new Intent(getActivity(), Season1.class);
+                    case 0:      ;Intent i=new Intent(getActivity(),Season1.class);
                         startActivity(i);
                         break;
                     case 1:        Intent i1=new Intent(getActivity(),Season2.class);

@@ -17,6 +17,7 @@
     <string name="s3e1">Two years on from his reported death, Sherlock reappears – to find still grieving pal Watson has moved out and got himself a new friend, Mary Morstan (Amanda Abbington). While John is kidnapped by persons unknown, Sherlock uncovers a terrorist plot to blow up the Houses of Parliament.</string>
     <string name="s3e2">On John and Mary\'s wedding day, awkward best man Sherlock uncovers a plot to murder one of John\'s old Army friends, Major Sholto, at the reception. Sherlock saves the day, and informs the happy couple that they have more good news on the way.</string>
     <string name="s3e3">Sherlock discovers that Mary is a deadly former assassin while trying to retrieve compromising letters from the evil \“Napoleon of blackmail\” Charles Augustus Magnussen. Sherlock\'s efforts to trap Magnussen backfire and he ends up killing him. Banished from Britain by Mycroft, Sherlock is forced to return when his old foe Moriarty appears to return from the grave.</string>
+    <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
