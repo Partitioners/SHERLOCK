@@ -2,6 +2,8 @@ package com.example.dell.sherlock;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
@@ -48,54 +50,21 @@ public class Overview extends Fragment {
             }
         });
         ArrayList<seasonlist> words=new ArrayList<seasonlist>();
-        words.add(new seasonlist("SEASON","1"));
-        words.add(new seasonlist("SEASON","2"));
-        words.add(new seasonlist("SEASON","3"));
+        words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s01e02),"1"));
+        words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s02e02),"2"));
+        words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s03e02),"3"));
 
-        customarrayadapter adapter=new customarrayadapter(getActivity(),words);             //maybe this needs to change to words only ie getactivity needs to be removed
-        RecyclerView listView=(RecyclerView) rootView.findViewById(R.id.list);              //change listview to recycler in list.xml
+        customarrayadapter adapter=new customarrayadapter(words);             //maybe this needs to change to words only ie getactivity needs to be removed
+        RecyclerView recylView=(RecyclerView) rootView.findViewById(R.id.list);              //change listview to recycler in list.xml
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
-        listView.setLayoutManager(horizontalLayoutManagaer);
-        listView.setAdapter(adapter);
-        //setListViewHeightBasedOnChildren(listView);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> l, View v, int position, long id) {
-                switch (position) {
-                    case 0:      ;Intent i=new Intent(getActivity(),Season1.class);
-                        startActivity(i);
-                        break;
-                    case 1:        Intent i1=new Intent(getActivity(),Season2.class);
-                        startActivity(i1);
-                        break;
-                    case 2:        Intent i2=new Intent(getActivity(),Season3.class);
-                        startActivity(i2);
-                        break;
-                }
-            }
-        });
+        recylView.setLayoutManager(horizontalLayoutManagaer);
+        recylView.setAdapter(adapter);
+
+
 
         return rootView;
     }
-    /*public static void setListViewHeightBasedOnChildren(ListView listView) {
-        ListAdapter listAdapter = listView.getAdapter();
-        if (listAdapter == null) {
-            // pre-condition
-            return;
-        }
 
-        int totalHeight = 0;
-        for (int i = 0; i < listAdapter.getCount(); i++) {
-            View listItem = listAdapter.getView(i, null, listView);
-            listItem.measure(0, 0);
-            totalHeight += listItem.getMeasuredHeight();
-        }
-
-        ViewGroup.LayoutParams params = listView.getLayoutParams();
-        params.height = totalHeight
-                + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-        listView.setLayoutParams(params);
-    }*/
 
 }

@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/imdb"
-            android:layout_weight="0.43"
+            android:layout_weight="0.76"
             android:id="@+id/imageView4"
             android:padding="10sp"
 
@@ -53,6 +53,7 @@
             android:text="9.2/"
             android:layout_marginTop="15sp"
             android:textStyle="bold"
+            android:layout_marginLeft="15sp"
             android:textSize="40sp"
             android:id="@+id/textView2"
             />
@@ -68,8 +69,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1.11">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -97,7 +97,15 @@
         </LinearLayout>
 
     </LinearLayout>
+    <android.support.v7.widget.CardView
 
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5sp"
+        android:layout_margin="6sp"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="#E0E0E0">
     <TextView
             android:text="TV-14  |  BBC-ONE  |  TV SERIES(2010-)  |  CRIME , MYSTERY "
             android:layout_width="wrap_content"
@@ -105,24 +113,26 @@
             android:layout_below="@+id/bar"
             android:padding="4dp"
             android:layout_marginLeft="3dp"
-            android:textSize="20dp"
+        android:layout_gravity="center"
+            android:textSize="17dp"
             android:id="@+id/textView3"
             />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:background="#D1C4E9"
+        android:padding="15sp"
+
+        />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="3dp"
-        android:background="@color/blue"
+
         android:layout_margin="8sp"/>
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_margin="10sp"
-        android:layout_height="wrap_content"
-        android:divider="@color/white"
-        android:dividerHeight="4.0sp"
-
-        />
 
 </LinearLayout>
 </ScrollView>

@@ -5,7 +5,11 @@ package com.example.dell.sherlock;
  */
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +28,9 @@ import java.util.List;
 public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.MyViewHolder>{
 
 
-    private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
 
+    private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
+    private Context context;
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
      * The context is used to inflate the layout file, and the list is the data we want
@@ -37,11 +42,15 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
     private List<seasonlist> horList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
+        public TextView numberTextView;
+        public ImageView bmp;
+        public CardView cd;
         public MyViewHolder(View view) {
             super(view);
-            TextView nameTextView = (TextView) view.findViewById(R.id.txt);
-            TextView numberTextView = (TextView) view.findViewById(R.id.txt1);
+            context=view.getContext();
+            bmp=(ImageView) view.findViewById(R.id.txt1);
+             numberTextView = (TextView) view.findViewById(R.id.txt);
+            cd=(CardView)view.findViewById(R.id.crd);
 
         }
     }
@@ -52,44 +61,41 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
         this.horList=horlist;
     }
 
-    /**
-     * Provides a view for an AdapterView (ListView, GridView, etc.)
-     *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
-     * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
-     * @return The View for the position in the AdapterView.
-     */
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.seasonview, parent, false);
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.seasonview, parent, false);
+
+        return new MyViewHolder(itemView);
+    }
+
+   @Override
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+        holder.numberTextView.setText(horList.get(position).retind());
+       holder.bmp.setImageBitmap(horList.get(position).retimg());
+
+        holder.cd.setOnClickListener(new View.OnClickListener(){
+    @Override
+    public void onClick(View v){
+        switch (position) {
+            case 0:      Intent i=new Intent(context,Season1.class);
+                            context.startActivity(i);
+                break;
+            case 1:        Intent i1=new Intent(context,Season2.class);
+                            context.startActivity(i1);
+                break;
+            case 2:        Intent i2=new Intent(context,Season3.class);
+                            context.startActivity(i2);
+                break;
         }
+    }
+});
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
-        seasonlist currentAndroidFlavor = getItem(position);
+    }
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
-
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
-        nameTextView.setText(currentAndroidFlavor.retdefault());
-
-        // Find the TextView in the list_item.xml layout with the ID version_number
-
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        numberTextView.setText(currentAndroidFlavor.rethindi());
-
-
-
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
-        return listItemView;
+    @Override
+    public int getItemCount() {
+        return horList.size();
     }
 
 }

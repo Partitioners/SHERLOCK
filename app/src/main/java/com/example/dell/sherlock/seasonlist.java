@@ -1,23 +1,25 @@
 package com.example.dell.sherlock;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by DELL on 28-12-2016.
  */
 
 public class seasonlist {
 
-    private String season;
+    private Bitmap img;
     private String index;
 
-    public seasonlist(String a,String b)
+    public seasonlist(Bitmap a,String b)
     {
-        season=a;
+        img=a;
         index=b;
 
     }
-    public String retdefault()
-    {return season;}
-    public String rethindi()
+    public Bitmap retimg()
+    {return img;}
+    public String retind()
     {return index;}
 }
 
