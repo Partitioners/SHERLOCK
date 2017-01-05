@@ -15,7 +15,7 @@ public class EpisodesInfo {
    private String _date;            //date of airing of episode
 private String _user;            //reviews of users
    private String _critics;         //reviews of critics both are textviews and setText to user and critics
-   private Bitmap _image;
+  // private Bitmap _image;
    private String _summary;
     private String _epratings;
 
@@ -24,11 +24,11 @@ private String _user;            //reviews of users
 
     }
     // constructor
-    public EpisodesInfo(int id, String name, String date,String user,String critics,String summary,String duration,String ratings,Bitmap image){
+    public EpisodesInfo(int id, String name, String date,String user,String critics,String summary,String duration,String ratings){
         this._id = id;      //
         this._episodename = name;    //
         this._duration = duration;    //
-        this._image=image;     //
+        //this._image=image;     //
         this._date=date;            //date of airing of episode
         this._user=user;            //reviews of users
         this._critics=critics;
@@ -37,11 +37,11 @@ private String _user;            //reviews of users
     }
 
     // constructor
-    public EpisodesInfo( String name, String date,String user,String critics,String summary,String duration,String ratings,Bitmap image){
+    public EpisodesInfo( String name, String date,String user,String critics,String summary,String duration,String ratings){
 
         this._episodename = name;
         this._duration = duration;
-        this._image=image;
+        //this._image=image;
         this._date=date;            //date of airing of episode
         this._user=user;            //reviews of users
         this._critics=critics;
@@ -49,14 +49,14 @@ private String _user;            //reviews of users
         this._epratings=ratings;
     }
 
-    public Bitmap getImage() {
+    /*public Bitmap getImage() {
         return this._image;
     }
 
     public void setImage(Bitmap image) {
         this._image=image;
     }
-
+*/
 
     public void setID(int id){
         this._id=id;

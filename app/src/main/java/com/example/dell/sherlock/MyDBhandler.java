@@ -31,7 +31,7 @@ public class MyDBhandler extends SQLiteOpenHelper {
     private static final String KEY_USER="userrev";
     private static final String KEY_CRITIC="criticrev";
     private static final String KEY_SUMMARY="summary";
-    private static final String KEY_IMAGE = "image_data";
+   // private static final String KEY_IMAGE = "image_data";
     private static final String KEY_RATINGS="eprate";
 
 
@@ -45,7 +45,7 @@ public class MyDBhandler extends SQLiteOpenHelper {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_CONTACTS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_NAME + " TEXT,"
                 + KEY_DURATION + " TEXT," +KEY_DATE + " TEXT," +KEY_USER + " TEXT," +KEY_CRITIC + " TEXT,"
-                +KEY_SUMMARY + " TEXT," +KEY_RATINGS + " TEXT," +KEY_IMAGE + " BLOB);";
+                +KEY_SUMMARY + " TEXT," +KEY_RATINGS + " TEXT );" ;
         db.execSQL(CREATE_CONTACTS_TABLE);
 
     }
@@ -71,28 +71,28 @@ public class MyDBhandler extends SQLiteOpenHelper {
         values.put(KEY_SUMMARY, episodes.getSummary());
         values.put(KEY_RATINGS, episodes.getRatings());
 
-        Bitmap bmp=episodes.getImage();
+        /*Bitmap bmp=episodes.getImage();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG,100, stream);
         byte[] byteArray = stream.toByteArray();
-/*Bitmap bitmap = BitmapFactory.decodeFile("/path/images/image.jpg");
+Bitmap bitmap = BitmapFactory.decodeFile("/path/images/image.jpg");
 ByteArrayOutputStream blob = new ByteArrayOutputStream();
 bitmap.compress(CompressFormat.PNG, 0 /* Ignored for PNGs , blob);
-        byte[] bitmapdata = blob.toByteArray();*/
+        byte[] bitmapdata = blob.toByteArray();
 
 
 
         values.put(KEY_IMAGE,byteArray);
 
-        /* Inserting Row */
+         Inserting Row */
         db.insert(TABLE_CONTACTS, null, values);
         db.close(); // Closing database connection
     }
-   private String[] cols=new String[]{KEY_ID,KEY_NAME,KEY_DATE,KEY_USER,KEY_CRITIC,KEY_DURATION,KEY_RATINGS,KEY_SUMMARY,KEY_IMAGE};
+   private String[] cols=new String[]{KEY_ID,KEY_NAME,KEY_DATE,KEY_USER,KEY_CRITIC,KEY_DURATION,KEY_RATINGS,KEY_SUMMARY};
     public String retval(int i,int pos) {
 
         SQLiteDatabase db = this.getReadableDatabase();
-Cursor c=db.query(TABLE_CONTACTS,new String[]{KEY_ID,KEY_NAME,KEY_DURATION,KEY_SUMMARY,KEY_IMAGE,KEY_CRITIC,
+Cursor c=db.query(TABLE_CONTACTS,new String[]{KEY_ID,KEY_NAME,KEY_DURATION,KEY_SUMMARY,KEY_CRITIC,
                            KEY_DATE,KEY_USER,KEY_RATINGS},null,null,null,null,null);
         c.moveToPosition(i);
         int name=c.getColumnIndex(cols[pos+1]);
@@ -103,16 +103,7 @@ String ret=c.getString(name);
 
     }
 
-    public Bitmap retimage(int i)
-    {SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c=db.query(TABLE_CONTACTS,new String[]{KEY_ID,KEY_NAME,KEY_DURATION,KEY_SUMMARY,KEY_IMAGE,KEY_CRITIC,
-                KEY_DATE,KEY_USER,KEY_RATINGS },null,null,null,null,null);
-        c.moveToPosition(i);
-        int name=c.getColumnIndex(cols[8]);
-        return BitmapFactory.decodeByteArray(c.getBlob(name),0,c.getBlob(name).length);
 
-
-    }
      }
 
 
