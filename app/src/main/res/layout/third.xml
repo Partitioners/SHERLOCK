@@ -14,9 +14,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/cat"
-    android:textSize="20sp"
+    android:textSize="19sp"
     android:layout_gravity="center"
-    android:layout_margin="10sp"
+    android:layout_margin="8sp"
     android:textStyle="bold"/>
     
     
@@ -27,6 +27,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -42,7 +46,7 @@
 
         android:layout_height="wrap_content"
         android:id="@+id/t1" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -52,7 +56,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +74,7 @@
 
                 android:layout_height="wrap_content"
                 android:id="@+id/t2" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -76,6 +83,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -91,7 +102,7 @@
 
                 android:layout_height="wrap_content"
                 android:id="@+id/t3" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -100,6 +111,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -114,7 +129,7 @@
 
                 android:layout_height="wrap_content"
                 android:id="@+id/t4" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -123,6 +138,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -139,7 +158,7 @@
 
                 android:layout_height="wrap_content"
                 android:id="@+id/t5" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -148,6 +167,10 @@
         card_view:cardCornerRadius="5sp"
         card_view:cardBackgroundColor="#E0E0E0"
         android:layout_margin="6sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="87dp"
@@ -163,7 +186,7 @@
 
                 android:layout_height="wrap_content"
                 android:id="@+id/t6" />
-
+</LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
 </ScrollView>
