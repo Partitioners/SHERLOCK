@@ -19,8 +19,8 @@
     <string name="s3e3">Sherlock discovers that Mary is a deadly former assassin while trying to retrieve compromising letters from the evil \“Napoleon of blackmail\” Charles Augustus Magnussen. Sherlock\'s efforts to trap Magnussen backfire and he ends up killing him. Banished from Britain by Mycroft, Sherlock is forced to return when his old foe Moriarty appears to return from the grave.</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
 <string name="cat">CATCH SHERLOCK ON SOCIAL WORLD</string>
-
-
+<string name="create"><b>CREATED BY: </b>Steven Moffat , Mark Gatiss</string>
+<string name="based"><b>Based on the works of </b><i>Sherlock Holmes</i> by Sir Arthur Conan Doyle</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

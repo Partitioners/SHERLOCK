@@ -55,8 +55,8 @@ public class Overview extends Fragment {
         words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s02e02),"2"));
         words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s03e02),"3"));
 
-        customarrayadapter adapter=new customarrayadapter(words);             //maybe this needs to change to words only ie getactivity needs to be removed
-        RecyclerView recylView=(RecyclerView) rootView.findViewById(R.id.list);              //change listview to recycler in list.xml
+        customarrayadapter adapter=new customarrayadapter(words);
+        RecyclerView recylView=(RecyclerView) rootView.findViewById(R.id.list);
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recylView.setLayoutManager(horizontalLayoutManagaer);

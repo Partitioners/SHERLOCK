@@ -31,14 +31,7 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
 
     private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
     private Context context;
-    /**
-     * This is our own custom constructor (it doesn't mirror a superclass constructor).
-     * The context is used to inflate the layout file, and the list is the data we want
-     * to populate into the lists.
-     *
-     * @param context        The current context. Used to inflate the layout file.
-     * @param androidFlavors A List of AndroidFlavor objects to display in a list
-     */
+
     private List<seasonlist> horList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

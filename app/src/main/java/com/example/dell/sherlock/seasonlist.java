@@ -10,16 +10,28 @@ public class seasonlist {
 
     private Bitmap img;
     private String index;
-
+    private String castname;
+    private int id;
     public seasonlist(Bitmap a,String b)
     {
         img=a;
         index=b;
 
     }
+    public seasonlist(int a,String b,String c)
+    {
+        id=a;
+        index=b;
+castname=c;
+    }
     public Bitmap retimg()
     {return img;}
     public String retind()
     {return index;}
+public String cstname()
+{return castname;}
+    public int image()
+    {return id;}
+
 }
 
