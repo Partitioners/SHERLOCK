@@ -23,7 +23,7 @@ public class Info extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("SHERLOCK : INFO");
+        //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("SHERLOCK : INFO");
 
         return inflater.inflate(R.layout.second, container, false);
     }

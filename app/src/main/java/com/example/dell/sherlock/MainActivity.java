@@ -19,8 +19,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     MyDBhandler db;
     public static int [] a=new int[]{R.id.name,R.id.date,R.id.user,R.id.critics,R.id.duration,R.id.ratings,R.id.summary};
-    public static final String API_KEY ="AIzaSyCCHlcWXbqouIBGnMeUYdcuc1sRDG8hii0";
-    public static YouTubePlayer mfrag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
