@@ -38,9 +38,8 @@ public class Overview extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-        //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("SHERLOCK : OVERVIEW");
-            View rootView = inflater.inflate(R.layout.first, container, false);
+        View rootView = inflater.inflate(R.layout.first, container, false);
+        getActivity().setTitle("SHERLOCK : OVERVIEW");
 
         Button button=(Button)rootView.findViewById(R.id.youtube);
         button.setOnClickListener(new View.OnClickListener() {

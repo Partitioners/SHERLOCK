@@ -3,14 +3,15 @@ package com.example.dell.sherlock;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by DELL on 29-12-2016.
  */
 
-public class Fragadaptfront extends FragmentPagerAdapter {
-    public Fragadaptfront(FragmentManager fm) {
+public class season1frafadapt extends FragmentPagerAdapter {
+    private String[] title=new String[]{"Episode 1","Episode 2","Episode 3"};
+
+    public season1frafadapt(FragmentManager fm) {
         super(fm);
     }
 
@@ -18,15 +19,14 @@ public class Fragadaptfront extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
 
-            return new Overview();
+            return new S01E01();
         } else if (position == 1){
-            return new Info();
+            return new S01E02();
         } else {
-            return new Social();
+            return new S01E03();
         }
+
     }
-
-
 
     @Override
     public int getCount() {
@@ -35,13 +35,6 @@ public class Fragadaptfront extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
 
-        if(position==0)
-            return "OVERVIEW";
-            else if(position==1)
-            return "INFO";
-            else
-            return "SOCIAL";
-
-
+    return title[position];
     }
 }

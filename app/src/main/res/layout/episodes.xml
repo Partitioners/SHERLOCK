@@ -12,14 +12,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <FrameLayout
-        android:id="@+id/you"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:visibility="visible"
-        android:elevation="2sp"
 
-        />
+       android:layout_height="230sp"
+        >
+        <ImageView
+        android:layout_height="match_parent"
+         android:layout_width="match_parent"
+
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:id="@+id/video"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playbutton"
+         android:id="@+id/play"
+         android:foregroundGravity="center"
+            android:layout_marginTop="70sp"
+
+            />
+    </RelativeLayout>
 
 
 <LinearLayout

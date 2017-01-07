@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.support.design.widget.TabLayout;
@@ -18,8 +19,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     MyDBhandler db;
+    public static ImageView iv,iv1;
+    public static TextView t;
     public static int [] a=new int[]{R.id.name,R.id.date,R.id.user,R.id.critics,R.id.duration,R.id.ratings,R.id.summary};
-
+public static int [] bs=new int[]{R.id.video,R.id.play};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
