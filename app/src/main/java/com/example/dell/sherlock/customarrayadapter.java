@@ -30,8 +30,8 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
 
 
     private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
-    private Context context;
-
+    public Context context;
+public static String name1="Season";
     private List<seasonlist> horList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -67,21 +67,16 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
         holder.numberTextView.setText(horList.get(position).retind());
        holder.bmp.setImageBitmap(horList.get(position).retimg());
 
-        holder.cd.setOnClickListener(new View.OnClickListener(){
+        holder.cd.setOnClickListener(
+                new View.OnClickListener(){
     @Override
     public void onClick(View v){
-        switch (position) {
-            case 0:      Intent i=new Intent(context,Season1.class);
-                            context.startActivity(i);
-                break;
-            case 1:        Intent i1=new Intent(context,Season2.class);
-                            context.startActivity(i1);
-                break;
-            case 2:        Intent i2=new Intent(context,Season3.class);
-                            context.startActivity(i2);
-                break;
-        }
-    }
+
+                Intent i=new Intent(context,Season1.class);
+                  i.putExtra("",position);
+                context.startActivity(i);
+          }
+
 });
 
     }

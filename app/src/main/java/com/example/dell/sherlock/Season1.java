@@ -12,15 +12,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 public class Season1 extends AppCompatActivity {
+    int no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ViewPager viewPagers1 = (ViewPager) findViewById(R.id.viewpager);
+        Intent i=getIntent();
+        no=i.getIntExtra("",0);
 
         // Create an adapter that knows which fragment should be shown on each page
-        season1frafadapt adapters1 = new season1frafadapt(getSupportFragmentManager());
+        season1frafadapt adapters1 = new season1frafadapt(getSupportFragmentManager(),no);
 
         // Set the adapter onto the view pager
         viewPagers1.setAdapter(adapters1);

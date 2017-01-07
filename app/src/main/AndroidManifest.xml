@@ -16,8 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Season1" />
-        <activity android:name=".Season2" />
-        <activity android:name=".Season3"></activity>
     </application>
 
 </manifest>
