@@ -49,14 +49,7 @@ private String _user;            //reviews of users
         this._epratings=ratings;
     }
 
-    /*public Bitmap getImage() {
-        return this._image;
-    }
 
-    public void setImage(Bitmap image) {
-        this._image=image;
-    }
-*/
 
     public void setID(int id){
         this._id=id;

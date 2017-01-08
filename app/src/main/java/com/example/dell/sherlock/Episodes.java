@@ -6,19 +6,12 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerSupportFragment;
-
-//import static com.example.dell.sherlock.MainActivity.API_KEY;
 import static com.example.dell.sherlock.MainActivity.a;
 import static com.example.dell.sherlock.MainActivity.bs;
 import static com.example.dell.sherlock.MainActivity.iv;
@@ -70,12 +63,22 @@ public Episodes(int index)
         ImageView imageView=(ImageView)rootView.findViewById(R.id.image1);
         imageView.setImageResource(images[index]);
 
-        for(int i=0;i<7;i++) {
+        for(int i=0;i<5;i++) {
             t = (TextView) rootView.findViewById(a[i]);
             t.setText(db.retval(index,i));
         }
+        for(int i=5;i<7;i++) {
 
-
+            final String sd=db.retval(index,i);
+t=(TextView)rootView.findViewById(a[i]);
+            t.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(sd));
+                    startActivity(intent);
+                }
+            });
+        }
         return rootView;}
 
 }
