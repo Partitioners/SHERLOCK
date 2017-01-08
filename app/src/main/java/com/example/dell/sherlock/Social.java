@@ -32,7 +32,7 @@ private int [] idt=new int[]{R.id.t1,R.id.t2,R.id.t3,R.id.t4,R.id.t5,R.id.t6};
 
 
         View rootView =inflater.inflate(R.layout.third, container, false);
-        getActivity().setTitle("SHERLOCK : SOCIAL");
+
         for(int i=0;i<6;i++) {
           final int j=i;
 

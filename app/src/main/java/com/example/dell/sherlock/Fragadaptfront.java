@@ -3,7 +3,7 @@ package com.example.dell.sherlock;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
+
 
 /**
  * Created by DELL on 29-12-2016.

@@ -17,13 +17,13 @@ import java.lang.String;
 public class MyDBhandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
-    // Database Name
+
     private static final String DATABASE_NAME = "episodesManager";
 
-    // Contacts table name
+
     private static final String TABLE_CONTACTS = "episodes";
 
-    // Contacts Table Columns names
+
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "epname";
     private static final String KEY_DURATION = "duration";

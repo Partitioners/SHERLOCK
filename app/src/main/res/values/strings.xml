@@ -18,11 +18,16 @@
     <string name="s3e2">On John and Mary\'s wedding day, awkward best man Sherlock uncovers a plot to murder one of John\'s old Army friends, Major Sholto, at the reception. Sherlock saves the day, and informs the happy couple that they have more good news on the way.</string>
     <string name="s3e3">Sherlock discovers that Mary is a deadly former assassin while trying to retrieve compromising letters from the evil \“Napoleon of blackmail\” Charles Augustus Magnussen. Sherlock\'s efforts to trap Magnussen backfire and he ends up killing him. Banished from Britain by Mycroft, Sherlock is forced to return when his old foe Moriarty appears to return from the grave.</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-<string name="cat">CATCH SHERLOCK ON SOCIAL WORLD</string>
-<string name="create"><b>CREATED BY: </b>Steven Moffat , Mark Gatiss</string>
-<string name="based"><b>Based on the works of </b><i>Sherlock Holmes</i> by Sir Arthur Conan Doyle</string>
-
-
+    <string name="cat">CATCH SHERLOCK ON SOCIAL WORLD</string>
+    <string name="create"><b>CREATED BY: </b>Steven Moffat , Mark Gatiss</string>
+    <string name="based"><b>Based on the works of </b><i>Sherlock Holmes</i> by Sir Arthur Conan Doyle</string>
+    <string name="s4e1">As Sherlock waits to see Moriarty\'s next move, he takes on the case of finding someone who is going around and smashing six unique head statues of Margaret Thatcher.</string>
+    <string name="s4e2">Sherlock faces one of the most chilling enemies of his long career: the powerful and seemingly unassailable Culverton Smith - a man with a very dark secret indeed.</string>
+    <string name="s4e3">Sherlock travels to Europe to escape Moriarty\'s vengeance.</string>
+    <string name="duration"><b>Duration : </b>Expected to be 1 hr 28 min</string>
+    <string name="ratings"><b>Ratings : </b>N/A</string>
+    <string name="reviews">The episode is yet to be aired so no reviews available</string>
+    
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

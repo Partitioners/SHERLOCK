@@ -1,13 +1,8 @@
 package com.example.dell.sherlock;
 
-import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,6 +44,12 @@ db=new MyDBhandler(this);
                 "9"));
         db.addEpisode(new EpisodesInfo("His Last Vow","2 FEBRUARY 2014","http://www.imdb.com/title/tt2781046/reviews?ref_=tt_ov_rt","http://www.imdb.com/title/tt2781046/externalreviews?ref_=tt_ov_rt",getString(R.string.s3e3),"1 hr 29 min",
                 "9.4"));
+
+        db.addEpisode(new EpisodesInfo("The Six Thatchers","1 JANUARY 2017","http://www.imdb.com/title/tt3538760/reviews?ref_=tt_ov_rt","http://www.imdb.com/title/tt3538760/externalreviews?ref_=tt_ov_rt",getString(R.string.s4e1),"1 hr 28 min",
+                "8.0"));
+        db.addEpisode(new EpisodesInfo("The Lying Detective","8 JANUARY 2017","N/A","N/A",getString(R.string.s4e2),"1 hr 28 min",
+                "9.9"));
+
 
 
 

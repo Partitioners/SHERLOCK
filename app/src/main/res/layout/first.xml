@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/blue"
+        android:background="#CFD8DC"
         android:id="@+id/bar"
         >
 
@@ -39,15 +39,16 @@
             android:src="@drawable/imdb"
             android:layout_weight="0.76"
             android:id="@+id/imageView4"
-            android:padding="10sp"
+            android:padding="8sp"
+
 
             />
 
         <LinearLayout
-      android:layout_width="wrap_content"
+      android:layout_width="287dp"
       android:layout_height="match_parent"
             android:weightSum="1"
-            android:layout_weight="0.28">
+            android:layout_weight="2.29">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -62,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="10"
+            android:textColor="#5D4037"
             android:textSize="20sp"
             android:layout_marginTop="35sp"
 
@@ -75,17 +77,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Season 4 trailer out !!"
+                    android:text="Season 4 official teaser out"
                     android:id="@+id/textView7"
-                    android:layout_marginTop="8sp"
-                    android:layout_marginLeft="20sp"
-                    android:textSize="14sp"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginLeft="13sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"/>
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="132dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="39sp"
-                    android:layout_marginBottom="6sp"
+                    android:layout_marginLeft="24sp"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginBottom="4sp"
                     android:padding="6sp"
                     android:id="@+id/youtube"
                     android:textStyle="bold"

@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
@@ -28,7 +28,7 @@ public class Info extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 View rootView=inflater.inflate(R.layout.second, container, false);
-        getActivity().setTitle("SHERLOCK : INFO");
+
         ArrayList<seasonlist> words1=new ArrayList<seasonlist>();
         words1.add(new seasonlist(R.drawable.sherlock,"BENEDICT CUMBERBATCH","as Sherlock Holmes"));
         words1.add(new seasonlist(R.drawable.watson,"MARTIN FREEMAN","as Dr.John Watson"));

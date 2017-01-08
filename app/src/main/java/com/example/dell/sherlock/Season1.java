@@ -22,10 +22,10 @@ public class Season1 extends AppCompatActivity {
         Intent i=getIntent();
         no=i.getIntExtra("",0);
 
-        // Create an adapter that knows which fragment should be shown on each page
+
         season1frafadapt adapters1 = new season1frafadapt(getSupportFragmentManager(),no);
 
-        // Set the adapter onto the view pager
+
         viewPagers1.setAdapter(adapters1);
 
         TabLayout tabLayouts1 = (TabLayout) findViewById(R.id.tabs);

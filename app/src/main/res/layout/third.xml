@@ -9,12 +9,14 @@
 
 <LinearLayout
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/black">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/cat"
     android:textSize="19sp"
+    android:textColor="@color/white"
     android:layout_gravity="center"
     android:layout_margin="8sp"
     android:textStyle="bold"/>

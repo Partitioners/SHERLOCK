@@ -39,8 +39,6 @@ public class Overview extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.first, container, false);
-        getActivity().setTitle("SHERLOCK : OVERVIEW");
-
         Button button=(Button)rootView.findViewById(R.id.youtube);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +51,7 @@ public class Overview extends Fragment {
         words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s01e02),"1"));
         words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s02e02),"2"));
         words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s03e02),"3"));
+        words.add(new seasonlist(BitmapFactory.decodeResource(this.getResources(),R.drawable.s04e01),"4"));
 
         customarrayadapter adapter=new customarrayadapter(words);
         RecyclerView recylView=(RecyclerView) rootView.findViewById(R.id.list);

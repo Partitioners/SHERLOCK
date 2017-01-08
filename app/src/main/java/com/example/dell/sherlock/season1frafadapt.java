@@ -33,10 +33,16 @@ public class season1frafadapt extends FragmentPagerAdapter {
         } else if (SeasonNo == 1) {
             return new Episodes(position+3);
 
-        } else  {
+        } else if (SeasonNo==2) {
             return new Episodes(position+6);
         }
+        else  {
 
+         if(position<2)
+            return new Episodes(position + 9);
+        else
+             return new S04E03();
+        }
     }
 
     @Override

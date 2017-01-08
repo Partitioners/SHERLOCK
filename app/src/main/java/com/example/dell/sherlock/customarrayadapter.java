@@ -31,8 +31,7 @@ public class customarrayadapter extends RecyclerView.Adapter<customarrayadapter.
 
     private static final String LOG_TAG = customarrayadapter.class.getSimpleName();
     public Context context;
-public static String name1="Season";
-    private List<seasonlist> horList;
+  private List<seasonlist> horList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView numberTextView;
