@@ -28,9 +28,11 @@ public class Season1 extends AppCompatActivity {
 
         viewPagers1.setAdapter(adapters1);
 
+
         TabLayout tabLayouts1 = (TabLayout) findViewById(R.id.tabs);
 
 
         tabLayouts1.setupWithViewPager(viewPagers1);
+
     }
 }
